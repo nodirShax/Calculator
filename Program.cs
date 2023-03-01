@@ -2,6 +2,8 @@
 int firstNum = Convert.ToInt32(Console.ReadLine());
 System.Console.Write("Enter second number: ");
 int secondNum = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Enter operation (+,-,/,*) : ");
+string operation = Console.ReadLine();
 
 string massage = 
     (firstNum >= 0)
@@ -22,4 +24,24 @@ else
 {
     System.Console.WriteLine("1st number less then 2nd number!");
 }
+
+switch (operation)
+{
+    case "+":
+        System.Console.WriteLine($"{firstNum} + {secondNum} = {firstNum + secondNum}");
+        break;
+    case "-":
+        System.Console.WriteLine($"{firstNum} - {secondNum} = {firstNum - secondNum}");
+        break;
+    case "*":
+        System.Console.WriteLine($"{firstNum} * {secondNum} = {firstNum * secondNum}");
+        break;
+    case "/":
+        System.Console.WriteLine($"{firstNum} / {secondNum} = {firstNum / secondNum}");
+        break;
+    default:
+        System.Console.WriteLine("Operation not found");
+        break;
+}
+
 
