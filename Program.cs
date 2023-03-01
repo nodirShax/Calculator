@@ -53,3 +53,12 @@ string result = operation switch
 };
 
 System.Console.WriteLine(result);
+
+for (int i = 1; i <= 10; i++)
+{
+    for(int j = 1; j <=10; j++)
+    {
+        System.Console.WriteLine($"{i} * {j} = {i*j}");
+    }
+    System.Console.WriteLine();
+}
