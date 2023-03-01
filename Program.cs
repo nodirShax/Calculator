@@ -25,23 +25,31 @@ else
     System.Console.WriteLine("1st number less then 2nd number!");
 }
 
-switch (operation)
+// switch (operation)
+// {
+//     case "+":
+//         System.Console.WriteLine($"{firstNum} + {secondNum} = {firstNum + secondNum}");
+//         break;
+//     case "-":
+//         System.Console.WriteLine($"{firstNum} - {secondNum} = {firstNum - secondNum}");
+//         break;
+//     case "*":
+//         System.Console.WriteLine($"{firstNum} * {secondNum} = {firstNum * secondNum}");
+//         break;
+//     case "/":
+//         System.Console.WriteLine($"{firstNum} / {secondNum} = {firstNum / secondNum}");
+//         break;
+//     default:
+//         System.Console.WriteLine("Operation not found");
+//         break;
+// }
+string result = operation switch
 {
-    case "+":
-        System.Console.WriteLine($"{firstNum} + {secondNum} = {firstNum + secondNum}");
-        break;
-    case "-":
-        System.Console.WriteLine($"{firstNum} - {secondNum} = {firstNum - secondNum}");
-        break;
-    case "*":
-        System.Console.WriteLine($"{firstNum} * {secondNum} = {firstNum * secondNum}");
-        break;
-    case "/":
-        System.Console.WriteLine($"{firstNum} / {secondNum} = {firstNum / secondNum}");
-        break;
-    default:
-        System.Console.WriteLine("Operation not found");
-        break;
-}
+    "+" => $"{firstNum} + {secondNum} = {firstNum + secondNum}",
+    "-" => $"{firstNum} - {secondNum} = {firstNum - secondNum}",
+    "*" => $"{firstNum} * {secondNum} = {firstNum * secondNum}",
+    "/" => $"{firstNum} / {secondNum} = {firstNum / secondNum}",
+    _   => "Operation not found"
+};
 
-
+System.Console.WriteLine(result);
